@@ -18,7 +18,7 @@ set +a
 (2) Run each script in correct order
 
 ```bash
-bash -x ./setup_01_aks.sh
+bash -x ./step_01_aks.sh
 ...
 ```
 
