@@ -3,8 +3,6 @@ ACR_NAME=multijuicerdml3
 DNSNAME=multijuicerdml3
 EMAIL_ADDRESS="test@example.com"
 
-: << ENDING
-
 # Install MultiJuicer via helm
 helm repo add multi-juicer https://iteratec.github.io/multi-juicer/
 helm install multi-juicer multi-juicer/multi-juicer
@@ -81,8 +79,6 @@ helm install cert-manager jetstack/cert-manager \
   --set webhook.image.tag=$CERT_MANAGER_TAG \
   --set cainjector.image.repository=$ACR_URL/$CERT_MANAGER_IMAGE_CAINJECTOR \
   --set cainjector.image.tag=$CERT_MANAGER_TAG
-
-ENDING
 
 # Create cluster issuer
 
