@@ -4,6 +4,7 @@ DNSNAME=multijuicerdml4
 EMAIL_ADDRESS="test@example.com"
 
 # Hardcoded variables
+ACR_URL="$ACR_NAME.azurecr.io"
 SOURCE_REGISTRY=k8s.gcr.io
 CONTROLLER_IMAGE=ingress-nginx/controller
 CONTROLLER_TAG=v1.0.4
