@@ -13,10 +13,10 @@ spec:
   ingressClassName: nginx
   tls:
   - hosts:
-    - my-multi-juicer.<availability zone>.cloudapp.azure.com
+    - $FQDN_NAME
     secretName: tls-secret
   rules:
-  - host: my-multi-juicer.<availability zone>.cloudapp.azure.com
+  - host: $FQDN_NAME
     http:
       paths:
       - path: /
@@ -25,5 +25,5 @@ spec:
           service:
             name: juice-balancer
             port:
-              number: 3000i
+              number: 3000
 EOF
