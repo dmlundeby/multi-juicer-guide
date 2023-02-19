@@ -10,8 +10,9 @@ Steps:
 (1) Load the variables
 
 ```bash
-source ./custom_variables.sh
+set -a
 source ./variables.sh
+set +a
 ```
 
 (2) Run each script in correct order
