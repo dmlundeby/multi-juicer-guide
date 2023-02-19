@@ -10,13 +10,15 @@ Steps:
 (1) Load the variables
 
 ```bash
-source custom_variables.sh
-source variables.sh
+source ./custom_variables.sh
+source ./variables.sh
 ```
 
 (2) Run each script in correct order
 
 ```bash
-./setup_01_aks.sh
+bash -x ./setup_01_aks.sh
 ...
 ```
+
+The `-x` option prints out the command being run.
