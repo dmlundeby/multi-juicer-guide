@@ -1,4 +1,6 @@
-# az network public-ip show
+set -a
+source ./setup_07_ip_variables.sh
+set +a
 
 cat << EOF | kubectl apply -f -
 apiVersion: networking.k8s.io/v1
