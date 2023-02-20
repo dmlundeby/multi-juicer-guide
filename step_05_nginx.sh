@@ -1,5 +1,4 @@
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
-ACR_URL="$ACR_NAME.azurecr.io"
 helm install nginx-ingress ingress-nginx/ingress-nginx \
     --version 4.0.13 \
     --namespace default --create-namespace \
