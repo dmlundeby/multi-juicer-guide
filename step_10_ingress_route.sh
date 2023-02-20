@@ -1,5 +1,5 @@
 set -a
-source ./step_07_ip_variables.sh
+source ./step_06_ip_variables.sh
 set +a
 
 cat << EOF | kubectl apply -f -
