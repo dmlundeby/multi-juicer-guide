@@ -3,6 +3,7 @@ ACR_NAME=multijuicerdml4
 DNSNAME=multijuicerdml4
 EMAIL_ADDRESS="test@example.com"
 RG="multi-juicer"
+AKS_NAME="juicy-k8s"
 
 # Hardcoded variables
 ACR_URL="$ACR_NAME.azurecr.io"
