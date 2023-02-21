@@ -79,7 +79,7 @@ balancer:
 
 juiceShop:
   # -- Specifies how many JuiceShop instances MultiJuicer should start at max. Set to -1 to remove the max Juice Shop instance cap
-  maxInstances: 50
+  maxInstances: 40
   # -- Juice Shop Image to use
   image: bkimminich/juice-shop
   tag: v14.4.0
