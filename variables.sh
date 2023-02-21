@@ -1,6 +1,6 @@
 # Custom variables
-ACR_NAME=multijuicerdml4
-DNSNAME=multijuicerdml4
+ACR_NAME="juiceshopexample"
+DNSNAME="juice-shop-example"
 EMAIL_ADDRESS="test@example.com"
 RG="multi-juicer"
 AKS_NAME="juicy-k8s"
