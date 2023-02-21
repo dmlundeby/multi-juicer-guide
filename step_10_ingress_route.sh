@@ -13,10 +13,10 @@ spec:
   ingressClassName: nginx
   tls:
   - hosts:
-    - $FQDN_NAME
+    - $FQDN
     secretName: tls-secret
   rules:
-  - host: $FQDN_NAME
+  - host: $FQDN
     http:
       paths:
       - path: /
