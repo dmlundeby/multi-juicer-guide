@@ -29,15 +29,15 @@ balancer:
     # SET THIS TO TRUE IF IN PRODUCTION
     # Sets secure Flag in cookie
     # -- Sets the secure attribute on cookie so that it only be send over https
-    secure: false
+    secure: true
     # -- Changes the cookies name used to identify teams. Note will automatically be prefixed with "__Secure-" when balancer.cookie.secure is set to `true`
     name: balancer
     # -- Set this to a fixed random alpa-numeric string (recommended length 24 chars). If not set this get randomly generated with every helm upgrade, each rotation invalidates all active cookies / sessions requirering users to login again.
-    cookieParserSecret: null
+    cookieParserSecret: "1a3c182913da442e83230fb2"
   repository: iteratec/juice-balancer
   tag: null
   # -- Number of replicas of the juice-balancer deployment
-  replicas: 1
+  replicas: 3
   service:
     # -- Kubernetes service type
     type: ClusterIP
@@ -75,11 +75,11 @@ balancer:
     basicAuth:
       username: prometheus-scraper
       # -- Should be changed when metrics are enabled.
-      password: ERzCT4pwBDxfCKRGmfrMa8KQ8sXf8GKy
+      password: 20dad2a7caca4b739a48806d67cdd2b4
 
 juiceShop:
   # -- Specifies how many JuiceShop instances MultiJuicer should start at max. Set to -1 to remove the max Juice Shop instance cap
-  maxInstances: 10
+  maxInstances: 50
   # -- Juice Shop Image to use
   image: bkimminich/juice-shop
   tag: v14.4.0
@@ -183,4 +183,3 @@ juiceShopCleanup:
   affinity: {}
   # -- Optional Configure kubernetes toleration for the JuiceShopCleanup Job (see: https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/)
   tolerations: []
-  
