@@ -1,0 +1,5 @@
+export ACR_NAME="juiceshopexample"
+export DNSNAME="juice-shop-example"
+export EMAIL_ADDRESS="test@example.com"
+export RG="multi-juicer"
+export AKS_NAME="juicy-k8s"
