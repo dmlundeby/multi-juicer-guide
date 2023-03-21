@@ -1,7 +1,3 @@
-set -a
-source ./step_06_ip_variables.sh
-set +a
-
 cat << EOF | kubectl apply -f -
 apiVersion: networking.k8s.io/v1
 kind: Ingress
