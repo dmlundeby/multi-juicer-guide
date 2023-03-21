@@ -16,7 +16,7 @@ bash -x ./s<n>_script_<description>.sh
 
 The `-x` option is optional and prints out the command being run.
 
-**Links**:
+## Links
 
 This guide is mainly based on:
 
@@ -28,7 +28,7 @@ Other useful links:
 * For monitoring setup, the following link can be used: https://github.com/iteratec/multi-juicer/blob/main/guides/monitoring-setup/monitoring.md
 * MultiJuicer docs: https://pwning.owasp-juice.shop/
 
-**Tips**:
+## Tips
 
 * Get admin password: `kubectl get secrets juice-balancer-secret -o=jsonpath='{.data.adminPassword}' | base64 --decode`
 * Manage current logged-in instance: "$FQDN/balancer"
