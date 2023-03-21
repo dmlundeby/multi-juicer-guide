@@ -34,6 +34,8 @@ The `-x` option prints out the command being run.
 * Manage current logged-in instance: "$FQDN/balancer"
 * Scale nodes: `az aks scale -g $RG -n $AKS_NAME --node-count 3`
 
-By trial and error, 2 nodes allow for 7 instances. Surprisingly, increasing to 3 nodes allows for 16 instances.
+**Misc**
 
-For monitoring setup, the following link can be used: https://github.com/iteratec/multi-juicer/blob/main/guides/monitoring-setup/monitoring.md
+* By trial and error, 2 nodes allow for 7 instances. Increasing to 3 nodes allows for 16 instances (!).
+* For monitoring setup, the following link can be used: https://github.com/iteratec/multi-juicer/blob/main/guides/monitoring-setup/monitoring.md
+Docs: https://pwning.owasp-juice.shop/
