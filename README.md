@@ -25,6 +25,7 @@ This guide is mainly based on:
 
 Other useful links:
 
+* For production setup, please check the following list: https://github.com/iteratec/multi-juicer/blob/main/guides/production-notes/production-notes.md
 * For monitoring setup, the following link can be used: https://github.com/iteratec/multi-juicer/blob/main/guides/monitoring-setup/monitoring.md
 * MultiJuicer docs: https://pwning.owasp-juice.shop/
 
