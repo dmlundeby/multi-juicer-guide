@@ -1,4 +1,4 @@
-# MultiJuicer setup
+# MultiJuicer setup guide for Azure
 
 Procedure: Go through all steps `s<n>_<script|variables>_<description>.sh` in sequence.
 
