@@ -5,13 +5,13 @@ Procedure: Go through all steps `s<n>_<script|variables>_<description>.sh` in se
 Steps of type `variables` contains variables which should be loaded by the following command:
 
 ```bash
-source ./variables.sh
+source ./s<n>_variables_<description>.sh
 ```
 
 Steps of type `script` are scripts which should be run by the following command:
 
 ```bash
-bash -x ./step_01_aks.sh
+bash -x ./s<n>_script_<description>.sh
 ```
 
 The `-x` option is optional and prints out the command being run.
