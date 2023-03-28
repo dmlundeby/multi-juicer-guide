@@ -1,5 +1,21 @@
 # MultiJuicer setup guide for Azure
 
+## Introduction
+
+This is a guide for deploying [MultiJuicer](https://github.com/iteratec/multi-juicer) on an Azure Kubernetes cluster, using bash scripts. It is based on two guides ([1](https://github.com/iteratec/multi-juicer/blob/main/guides/azure/azure.md), [2](https://github.com/iteratec/multi-juicer/blob/main/guides/azure/ssl.md)), and is designed to be easy to reproduce.
+
+## Prerequisites
+
+The guide assumes running a Linux terminal. If using Windows (which I currently do), I recommend using WSL.
+
+The following tools need to be installed:
+
+* Azure CLI: https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-linux?pivots=apt
+* kubectl: https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#install-kubectl-on-linux
+* helm: https://helm.sh/docs/intro/install/#from-apt-debianubuntu
+
+## Guide
+
 Procedure: Go through all steps `s<n>_<script|variables>_<description>.sh` in sequence.
 
 Steps of type `variables` contains variables which should be loaded by the following command:
