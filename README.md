@@ -4,6 +4,8 @@
 
 This is a guide for deploying [MultiJuicer](https://github.com/iteratec/multi-juicer) on an Azure Kubernetes cluster, using bash scripts. It is based on two guides ([1](https://github.com/iteratec/multi-juicer/blob/main/guides/azure/azure.md), [2](https://github.com/iteratec/multi-juicer/blob/main/guides/azure/ssl.md)), and is designed to be easy to reproduce.
 
+When I have time, I will convert the shell scripts into Terraform/Pulumi.
+
 ## Prerequisites
 
 The guide assumes running a Linux terminal. If using Windows (which I currently do), I recommend using WSL.
