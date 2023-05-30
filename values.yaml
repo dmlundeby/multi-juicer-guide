@@ -2,7 +2,7 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
-imagePullPolicy: Always
+imagePullPolicy: IfNotPresent
 nodeSelector: {}
 
 ingress:
@@ -32,9 +32,9 @@ balancer:
     secure: true
     # -- Changes the cookies name used to identify teams. Note will automatically be prefixed with "__Secure-" when balancer.cookie.secure is set to `true`
     name: balancer
-    # -- Set this to a fixed random alpa-numeric string (recommended length 24 chars). If not set this get randomly generated with every helm upgrade, each rotation invalidates all active cookies / sessions requirering users to login again.
+    # -- Set this to a fixed random alpha-numeric string (recommended length 24 chars). If not set this gets randomly generated with every helm upgrade, each rotation invalidates all active cookies / sessions requiring users to login again.
     cookieParserSecret: "1a3c182913da442e83230fb2"
-  repository: iteratec/juice-balancer
+  repository: ghcr.io/juice-shop/multi-juicer/juice-balancer
   tag: null
   # -- Number of replicas of the juice-balancer deployment
   replicas: 3
@@ -75,22 +75,22 @@ balancer:
     basicAuth:
       username: prometheus-scraper
       # -- Should be changed when metrics are enabled.
-      password: 20dad2a7caca4b739a48806d67cdd2b4
+      password: ERzCT4pwBDxfCKRGmfrMa8KQ8sXf8GKy
 
 juiceShop:
   # -- Specifies how many JuiceShop instances MultiJuicer should start at max. Set to -1 to remove the max Juice Shop instance cap
   maxInstances: 40
   # -- Juice Shop Image to use
   image: bkimminich/juice-shop
-  tag: v14.4.0
+  tag: v15.0.0
   # -- Change the key when hosting a CTF event. This key gets used to generate the challenge flags. See: https://pwning.owasp-juice.shop/part1/ctf.html#overriding-the-ctfkey
   ctfKey: "zLp@.-6fMW6L-7R3b!9uR_K!NfkkTr"
   # -- Specify a custom Juice Shop config.yaml. See the JuiceShop Config Docs for more detail: https://pwning.owasp-juice.shop/part1/customization.html#yaml-configuration-file
   # @default -- See values.yaml for full details
   config: |
     application:
-      logo: https://raw.githubusercontent.com/iteratec/multi-juicer/main/images/multijuicer-icon-only-padding.png
-      favicon: https://raw.githubusercontent.com/iteratec/multi-juicer/main/juice-balancer/ui/public/favicon.ico
+      logo: https://raw.githubusercontent.com/juice-shop/multi-juicer/main/images/multijuicer-icon-only-padding.png
+      favicon: https://raw.githubusercontent.com/juice-shop/multi-juicer/main/juice-balancer/ui/public/favicon.ico
       showVersionNumber: false
       showGitHubLinks: false
     challenges:
@@ -105,7 +105,7 @@ juiceShop:
   resources:
     requests:
       cpu: 150m
-      memory: 200Mi
+      memory: 300Mi
   #  limits:
   #    cpu: 100m
   #    memory: 200Mi
@@ -145,9 +145,9 @@ juiceShop:
   # -- Optional Can be used to configure the runtime class for the JuiceShop pods to add an additional layer of isolation to reduce the impact of potential container escapes. (see: https://kubernetes.io/docs/concepts/containers/runtime-class/)
   runtimeClassName: null
 
-# Deletes unused JuiceShop instances after a configurable period of inactivity
+# Collects JuiceShop progress and sends and backs it up to the related kubernetes deployment
 progressWatchdog:
-  repository: iteratec/progress-watchdog
+  repository: ghcr.io/juice-shop/multi-juicer/progress-watchdog
   tag: null
   resources:
     requests:
@@ -164,7 +164,7 @@ progressWatchdog:
 
 # Deletes unused JuiceShop instances after a configurable period of inactivity
 juiceShopCleanup:
-  repository: iteratec/cleaner
+  repository: ghcr.io/juice-shop/multi-juicer/cleaner
   tag: null
   enabled: true
   # -- Specifies when Juice Shop instances will be deleted when unused for that period.
